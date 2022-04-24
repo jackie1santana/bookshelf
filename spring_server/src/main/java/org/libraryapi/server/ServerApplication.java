@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 
+
 @SpringBootApplication
 @RestController
 
@@ -27,20 +28,22 @@ public class ServerApplication {
 		JSONObject author_napoleon_hill = new JSONObject();
 		
 //		Titles under Authors
+		ArrayList<Object> authorList = new ArrayList<Object>();
 		ArrayList<String> napolean_hill_titles = new ArrayList<String>();
 		ArrayList<String> robert_greene_titles = new ArrayList<String>();
 		
 //		Robert greene Titles Arrays
 	 	robert_greene_titles.add("Human Nature");
 	 	robert_greene_titles.add("48 Laws of Power");
-	 	
+
 //		Napolean Hill Titles Arrays
 		napolean_hill_titles.add("Think and Grow Rich");
 
-//		Creating the JSON Object
+//		Creating the JSON Object 
+		// CREATE AN ARRAY TO LOOP IN FRONTEND
 		 books.put("authors", authors);
-	     authors.put("Robert greene", robert_greene_titles);
-	     authors.put("Napolean Hill", napolean_hill_titles);
+	     authors.put("robert_greene", robert_greene_titles);
+	     authors.put("napolean_hill", napolean_hill_titles);
 
 		return books;
 	}

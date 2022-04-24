@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 import Cookies from 'js-cookie';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 // Sign Up
 export const Login = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [loginUser, setLoginUser] = useState('');
   const [loginPass, setLoginPass] = useState('');
   const [loginBtnClicked, setLoginBtnClicked] = useState(false);
@@ -17,7 +17,7 @@ export const Login = () => {
   useEffect(() => {
     if (loginBtnClicked && loginUser === Cookies.get('username') && loginPass === Cookies.get('password')) {
       console.log('cookies & user login creds match');
-      navigate('/dashboard');
+      // navigate('/dashboard');
     } else {
       console.debug('check if cred match cookies');
     }

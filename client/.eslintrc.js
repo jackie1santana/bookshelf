@@ -23,5 +23,7 @@ module.exports = {
     'import/extensions': 'off',
     'no-console': 'off',
     'import/prefer-default-export': 'off',
+    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
   },
 };
